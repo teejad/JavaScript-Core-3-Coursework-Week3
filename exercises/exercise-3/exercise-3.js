@@ -6,3 +6,24 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+
+console.table(order);
+
+
+
+//create function that calculates the total price of the order by adding up the unit price of each item multiplied by the quantity
+function calculateTotalPrice(order) {
+  let totalPrice = 0;
+  for (let i = 0; i < order.length; i++) {
+    totalPrice += order[i].unitPrice * order[i].quantity;
+  }
+  return totalPrice;
+}
+
+console.log(calculateTotalPrice(order));
+
+
+
+
+
